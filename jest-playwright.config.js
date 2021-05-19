@@ -1,6 +1,7 @@
 module.exports = {
   launchOptions: {
-    headless: true
+    /* It will be headless = false always except when NODE_ENV = headless (github actions) */
+    headless: process.env.NODE_ENV == 'headless'
   },
   contextOptions: {
     ignoreHTTPSErrors: true,

@@ -10,7 +10,8 @@
     ]
   },
   "scripts": {
-    "test": "jest --testTimeout=10000 --force-exit --silent --verbose"
+    "test": "jest --testTimeout=10000 --force-exit --silent --verbose",
+    "test:headless": "cross-env NODE_ENV=headless jest --testTimeout=10000 --force-exit --silent --verbose"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +25,7 @@
   "dependencies": {
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.2",
-    "babel-jest": "^26.6.3"
+    "babel-jest": "^26.6.3",
+    "cross-env": "^7.0.3"
   }
 }
