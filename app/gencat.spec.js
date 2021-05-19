@@ -50,4 +50,15 @@ describe('Gencat.js', () => {
     const searchInput = await page.waitForSelector(SELECTOR_SEARCH_INPUT);
     expect(searchInput).toBeTruthy();
   });
+
+  it('should be able to find the search button', async () => {
+    page = await searchInGencat({
+      PAGE: page,
+      URL,
+      SELECTOR_SEARCH_BUTTON
+    });
+
+    const searchButton = await page.waitForSelector(SELECTOR_SEARCH_BUTTON);
+    expect(searchButton).toBeTruthy();
+  });
 });
