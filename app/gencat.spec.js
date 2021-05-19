@@ -14,7 +14,7 @@ let page;
 beforeAll(async () => {
   // Setup a browser using chromium
   browser = await chromium.launch({
-    headless: false,
+    headless: true,
     slowMo: 50
   });
 });
