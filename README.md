@@ -15,6 +15,25 @@ Use the package manager [npm](https://www.npmjs.com/) to install all dependencie
 ```bash
 npm install
 ```
+
+## Usage
+The function that makes the call to the gencat web page using Playwrigh is found in app/gencat.js
+
+It has several parameters, the most important being:
+
+- PAGE => Page instance (see Playwrigh documentation)
+- SEARCH_TEXT => Text to search
+
+The rest of the parameters have default values that can be overwritten if necessary: another URL, another selector for the search button and another selector for the search input
+
+A fully functional example of the searchInGencat function is shown in app / index.js.
+
+To run it:
+```bash
+cd app
+node index.js
+```
+
 ## Tests
 
 If you want to execute tests, in project root folder run:
