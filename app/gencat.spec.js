@@ -39,4 +39,15 @@ describe('Gencat.js', () => {
     page = await searchInGencat({ PAGE: page, URL });
     expect(await page.title()).toMatch('gencat');
   });
+
+  it('should be able to find a search input', async () => {
+    page = await searchInGencat({
+      PAGE: page,
+      URL,
+      SELECTOR_SEARCH_INPUT
+    });
+
+    const searchInput = await page.waitForSelector(SELECTOR_SEARCH_INPUT);
+    expect(searchInput).toBeTruthy();
+  });
 });
