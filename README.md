@@ -1,10 +1,10 @@
 # gencat-test
-Technical test using playwright
+Technical test using [Playwright](https://playwright.dev/)
 
 ## What is this
 This is a project created as part of a frontend selection process.
 
-It consists of using the Playwright library to automate the process of accessing a web page (in this case [gencat](https://web.gencat.cat/ca/inici) ).
+It consists of using the Playwright library to automate the process of accessing a web page (in this case [gencat](https://web.gencat.cat/ca/inici)).
 
 In addition, the project has been developed using the TDD methodology, using Jest with a Playwright-compatible configuration.
 
