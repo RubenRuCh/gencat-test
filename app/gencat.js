@@ -14,6 +14,12 @@ async function searchInGencat({
   try {
     // Navigate to specified URL
     await PAGE.goto(URL);
+
+    // Type a search
+    await PAGE.fill(SELECTOR_SEARCH_INPUT, SEARCH_TEXT);
+
+    // Find search button and press it
+    await PAGE.click(SELECTOR_SEARCH_BUTTON);
   } catch (error) {
     console.error(error);
   } finally {

@@ -61,4 +61,16 @@ describe('Gencat.js', () => {
     const searchButton = await page.waitForSelector(SELECTOR_SEARCH_BUTTON);
     expect(searchButton).toBeTruthy();
   });
+
+  it('should apply search text triggering a change in url', async () => {
+    page = await searchInGencat({
+      PAGE: page,
+      URL,
+      SEARCH_TEXT,
+      SELECTOR_SEARCH_BUTTON,
+      SELECTOR_SEARCH_INPUT
+    });
+    // Gencat web uses + symbol to fill blank spaces in string used to search
+    expect(await page.url().replace('+', ' ')).toMatch(SEARCH_TEXT);
+  });
 });
