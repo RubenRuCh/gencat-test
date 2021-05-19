@@ -12,7 +12,8 @@ async function searchInGencat({
   SELECTOR_SEARCH_INPUT = 'input[type="search"]'
 }) {
   try {
-    // TODO Do something ...
+    // Navigate to specified URL
+    await PAGE.goto(URL);
   } catch (error) {
     console.error(error);
   } finally {
